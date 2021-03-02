@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React from "react";
+// import logo from './logo.svg';
 import './App.css';
+// import Header from "./components/Header";
+import {Header} from "./components/Header"; // if we want to get a particular component from a Header file
+import Footer from "./components/Footer";
+import ErrorBoundary from "./components/ErrorBoundary";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// function App() {
+//   return (
+//     <div className="App">
+//         {/* <img src={logo} className="App-logo" alt="logo" /> */}
+//         <h1>
+//           Hello Ahsan1
+//         </h1>
+        
+//     </div>
+//   );
+// }
+
+class App extends React.Component
+{
+  render(){
+    return (
+      <div className="App">
+      <Header/>
+      <br/><br/><br/><br/><br/><br/>
+        <h1>Hello Ahsan,</h1>
+        
+        {/* {Header} */}
+        <ErrorBoundary><Footer/></ErrorBoundary>
+      </div>
+    );
+  }
 }
+
 
 export default App;
