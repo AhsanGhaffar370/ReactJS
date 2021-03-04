@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-function Footer(){
+export const Footer1=() =>{
     return(
         <footer className="fixed-bottom bg-dark text-white text-center text-lg-start">
             {/* <!-- Grid container --> */}
@@ -66,15 +66,22 @@ function Footer(){
             </div>
             {/* <!-- Grid container --> */}
 
-            {/* <!-- Copyright --> */}
-            {/* <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);"> */}
-            <div className="text-center p-3 bg-secondary">
-                © 2020 Copyright:
-                <a className="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-            </div>
+            
         {/* <!-- Copyright --> */}
         </footer>
     );
 }
 
-export default Footer;
+export const Footer2=()=>{
+    return(
+        
+        // <!-- Copyright -->
+        // <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);"> 
+        <div className="fixed-bottom text-center p-3 bg-dark font-weight-bold text-light">
+            © 2020 Copyright: 
+            <a className="text-primary" href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </div>
+    );
+}
+
+// export default Footer;
