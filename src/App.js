@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import {Footer2} from "./components/Footer";// if we want to get a particular component from a Header file
 // import Footer from "./components/Footer"; 
 import ErrorBoundary from "./components/ErrorBoundary";
+import States from "./components/States";
 
 // function App() {
 //   return (
@@ -32,10 +33,11 @@ class App extends React.Component
       </Header>
       <br/><br/><br/><br/><br/><br/>
       <ClassHeader ah="Ahsan Bhai"/>
-        {/* <h1>Hello Ahsan,</h1> */}
-        
-        {/* {Header} */}
-        <ErrorBoundary><Footer2/></ErrorBoundary>
+      {/* <h1>Hello Ahsan,</h1> */}
+      {/* {Header} */}
+
+      <States/>
+      <ErrorBoundary><Footer2/></ErrorBoundary>
       </div>
     );
   }
