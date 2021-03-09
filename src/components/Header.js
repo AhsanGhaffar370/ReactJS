@@ -2,11 +2,12 @@ import React from "react";
 
 function Header(props){
     return (
-    <div className="container">
+    <div className="container-fluid bg-dark">
 
-        <nav className="navbar navbar-expand-lg  fixed-top animated slideInDown navbar-light bg-dark pl-4 pr-4 pt-2 pb-2">
+        <nav className="navbar navbar-expand-lg animated slideInDown navbar-light bg-dark pl-4 pr-4 pt-2 pb-2">
+        {/* <nav className="navbar navbar-expand-lg fixed-top animated slideInDown navbar-light bg-dark pl-4 pr-4 pt-2 pb-2"> sticky header */}
         
-            <a className="navbar-brand text-white" href="#"><i className="fab fa-asymmetrik fa-3x text-white"></i>({props.name}-{props.last}-{props.abc}) | ({props.children[1]}) (Props)</a>
+            <a className="navbar-brand text-white" href="#"><i className="fab fa-asymmetrik fa-3x text-white"></i></a>
             
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
