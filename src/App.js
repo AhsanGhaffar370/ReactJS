@@ -3,7 +3,6 @@ import React from "react";
 import "./myStyle.css";
 import './App.css';
 
-
 import PropsFunctional from "./components/PropsFunctional";
 import PropsClass from "./components/PropsClass";
 import ClassEvent from "./components/EventHandlingClass";
@@ -35,6 +34,7 @@ import LifeCycleA from './components/LifeCycleA'
 import HooksUseState from "./components/HooksUseState"
 import HooksUseEffect from "./components/HooksUseEffect"
 
+import MousePos from "./components/MousePos"
 
 // function App() {
 //   return (
@@ -52,12 +52,12 @@ class App extends React.Component
 {
   render(){
 
-
-    
     return (
 
       <div className="App">
       <Header/>
+
+      <MousePos></MousePos>
 
       <PropsFunctional  name="Ahsan" last="Ghaffar" abc="Rao">
         <span>child1</span>
@@ -69,8 +69,7 @@ class App extends React.Component
       <FunctionalEvent status="true"/>
 
       <MapFunc_InlineStyling></MapFunc_InlineStyling>
-      
-      
+
       <States name="AhsanRao"/>
 
       <Product></Product>
@@ -89,7 +88,6 @@ class App extends React.Component
       <HooksUseState></HooksUseState>
 
       <HooksUseEffect></HooksUseEffect>
-
 
       <br/><br/><br/><br/><br/>
       <ErrorBoundary><Footer2/></ErrorBoundary>

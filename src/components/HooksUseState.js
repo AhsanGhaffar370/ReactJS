@@ -12,9 +12,6 @@ export default function HooksUseState() {
         }])
     }
     
-
-    
-
     const updateCounter=()=>{
         setState(counter+1);
     }
