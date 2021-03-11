@@ -36,6 +36,8 @@ import HooksUseEffect from "./components/HooksUseEffect"
 
 import MousePos from "./components/MousePos"
 
+import A from "./components/A"
+
 // function App() {
 //   return (
 //     <div className="App">
@@ -57,6 +59,7 @@ class App extends React.Component
       <div className="App">
       <Header/>
 
+      <A></A>
       <MousePos></MousePos>
 
       <PropsFunctional  name="Ahsan" last="Ghaffar" abc="Rao">

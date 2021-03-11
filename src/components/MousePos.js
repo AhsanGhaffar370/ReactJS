@@ -23,6 +23,8 @@ const MousePos = () => {
 
     return (
         <div>
+            <p className="bg-warning font-weight-bold">Mouse Position</p>
+            
             <b>X: </b>{pos.x} - <b>Y: </b>{pos.y}
         </div>
     );
