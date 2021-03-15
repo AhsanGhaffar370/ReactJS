@@ -9,7 +9,8 @@ const C = () => {
             {
                 ({data,counterfunc})=>(
                     <div>
-                        <button onClick={counterfunc}>Increment C - {data.roll}</button>    
+                        <button onClick={counterfunc}>Increment C - {data.roll}</button>   
+                        <p>{data.name}</p> 
                     </div>
                 )
             }

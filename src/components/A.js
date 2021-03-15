@@ -11,7 +11,10 @@ const A = () => {
     const counterfunc=()=>{
         console.log("update counter A ")
         // setStudent("ghaffar")
-        setStudent({roll:student.roll+1})
+        setStudent({
+            name:"ahsan",
+            roll:student.roll+1
+        })
     }
 
     const [contVal,setcontVal]=useState({
@@ -19,18 +22,26 @@ const A = () => {
         counterfunc: counterfunc
     })
 
-    // useEffect(()=>{
-    //     console.log("Component Updated (UseEffect)")
-    // },[student])
+    useEffect(()=>{
+        console.log("Component Updated (UseEffect)")
+        setcontVal({
+            data: {
+                name:"ahsan",
+                roll:student.roll
+            }
+            
+        })
+    },[])
 
     return (
         <div>
             <h1>A Component</h1>
             
             <button onClick={counterfunc}>increment A -{student.roll}</button>
+            <p>{student.name}</p>
             <mycontext.Provider value={contVal}>
-                <B/>
                 <C/>
+                <B/>
             </mycontext.Provider>
         </div>
     );
