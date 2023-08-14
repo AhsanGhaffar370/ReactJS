@@ -7,28 +7,28 @@ export default class Forms extends Component {
         this.state={
             id:0,
             name:"",
-            flavor:"",
+            city:"Karachi",
             isGoing: true
         }
     }
-    handleUsername=(e)=>{
+    handleName=(e)=>{
         this.setState({name: e.target.value})
     }
-    handleChange=(event)=> {
-        this.setState({flavor: event.target.value});
+    handleCity=(event)=> {
+        this.setState({city: event.target.value});
     }
-    handleInputChange=(e)=>{
+    handleIsGoing=(e)=>{
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
-
         const name = e.target.name; //isGoing
-        this.setState({
-          [name]: value
-        });
+        this.setState({ [name]: value });
     }
 
     handleSubmit=(e)=>{
-        alert(`${this.state.name} from ${this.state.flavor} ${this.state.isGoing}`)
-        e.preventDefault()
+        e.preventDefault();
+        
+        let isGoing = this.state.isGoing ? "going" : "not going";
+        alert(`${this.state.name} is ${isGoing} to ${this.state.city} `)
+        
     }
     
     render() {
@@ -37,9 +37,9 @@ export default class Forms extends Component {
             <p className="bg-warning font-weight-bold mt-2">Forms (Form Handling in React)</p>
                 
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" value={this.state.name} onChange={this.handleUsername} placeholder="Name" />
+                    <input type="text" value={this.state.name} onChange={this.handleName} placeholder="Name" />
                     <br/>
-                    <select value={this.state.flavor} onChange={this.handleChange}>
+                    <select value={this.state.city} onChange={this.handleCity}>
                         <option value="karachi">Karachi</option>
                         <option value="Lahore">Lahore</option>
                         <option value="Islamabad">Islamabad</option>
@@ -47,7 +47,7 @@ export default class Forms extends Component {
                     </select>
                     <br/>
                     <label>
-                    <input name="isGoing" type="checkbox" checked={this.state.isGoing} onChange={this.handleInputChange} />
+                    <input name="isGoing" type="checkbox" checked={this.state.isGoing} onChange={this.handleIsGoing} />
                     Is Going
                     </label>
                     <br/>

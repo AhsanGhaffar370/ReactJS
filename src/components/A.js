@@ -1,9 +1,11 @@
 import React,{useEffect,useState} from 'react';
 import B from "./B"
 import C from "./C"
+import "./A.css"
 export const mycontext=React.createContext();
 
-const A = () => {
+const A = (props) => {
+    let textColor = props.isRed ? "redColor" : "blueColor";
 
     const [student,setStudent]=useState({name:"ahsan",roll:20})
     // const [student,setStudent]=useState("ahsan")
@@ -12,7 +14,7 @@ const A = () => {
         console.log("update counter A ")
         // setStudent("ghaffar")
         setStudent({
-            name:"ahsan",
+            name:"ahsan updated",
             roll:student.roll+1
         })
     }
@@ -26,7 +28,7 @@ const A = () => {
         console.log("Component Updated (UseEffect)")
         setcontVal({
             data: {
-                name:"ahsan",
+                name:"ahsan21",
                 roll:student.roll
             }
             
@@ -35,7 +37,7 @@ const A = () => {
 
     return (
         <div>
-            <h1>A Component</h1>
+            <h1 className={`${textColor} fontSize`}>A Component</h1>
             
             <button onClick={counterfunc}>increment A -{student.roll}</button>
             <p>{student.name}</p>

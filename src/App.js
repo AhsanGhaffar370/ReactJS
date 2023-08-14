@@ -2,11 +2,15 @@ import React from "react";
 // import logo from './logo.svg';
 import "./myStyle.css";
 import './App.css';
+import AppStyle from './App.module.css'; // .module.css use to use style in local component
 
 import PropsFunctional from "./components/PropsFunctional";
 import PropsClass from "./components/PropsClass";
 import ClassEvent from "./components/EventHandlingClass";
 import FunctionalEvent from "./components/EventHandlingFunctional";
+
+import {FirstComp} from "./components/FirstFunctionalComp";
+import FirstClassComp from "./components/FirstClassComp";
 
 import MapFunc_InlineStyling from "./components/MapFunc_InlineStyling"
 
@@ -59,12 +63,26 @@ class App extends React.Component
       <div className="App">
       <Header/>
 
-      <A></A>
+
+      {/* <FirstComp 
+        firstName="Ahsan"
+      >
+        <h3>I am child prop</h3>
+      </FirstComp>
+
+      <FirstClassComp 
+        firstName="Ahsan"
+      /> */}
+      
+      <A isRed={false}></A>
       <MousePos></MousePos>
 
+      <span className="AppyGlobal">child1</span>
+        <span className={AppStyle.AppyLocal}>child2</span> {/* .module.css use to use style in local component */}
+        
       <PropsFunctional  name="Ahsan" last="Ghaffar" abc="Rao">
-        <span>child1</span>
-        <span>child2</span>
+        <span className="AppyGlobal">child1</span>
+        <span className={AppStyle.AppyLocal}>child2</span>
       </PropsFunctional>
       <PropsClass ah="Ahsan Bhai"/>
 
