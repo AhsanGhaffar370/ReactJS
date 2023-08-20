@@ -14,14 +14,19 @@ export default class GetRequest extends Component {
     
     // We use componentDidMount method when we want to get/receive data from any Restful API/web service
     componentDidMount(){
-        axios.get("https://jsonplaceholder.typicode.com/posts")
+        axios.get("https://jsonplaceholder.typicode.com/posts22")
         .then(response => {
             this.setState({posts: response.data})
             console.log(response);
         })
         .catch(error => {
-            this.setState({error: "URL ERROR"})
-            console.log(error);
+            
+            if (error?.response?.status == '404') {
+                this.setState({error: "Invalid request url"})
+            } else if(error?.response?.status == '404'){
+                this.setState({error: "An error occurred while fetching data."})
+            }
+            console.error("api error: ",error?.response?.status);
         })
     }
     
