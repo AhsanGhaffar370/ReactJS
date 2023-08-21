@@ -26,6 +26,7 @@ class Product extends Component {
             <div>
                 <p className="bg-warning font-weight-bold">Product (getDerivedStateFromProps, use props as input of states)</p>
                 <input type="button" value="Update Counter" onClick={()=>{this.UpdateCounter(1)}} />
+                <p>Product Counter: {this.state.counter}</p>
                 <Cart ID={this.state.id} counter1={this.state.counter}></Cart>
             </div>
         )
@@ -48,9 +49,9 @@ class Cart extends Component {
     //this method is used when our state value is dependent upon props (in this case we use props.counter1 to update state.counter value)
     static getDerivedStateFromProps(props, state){
         console.log("Props counter:",props.counter1);
-        console.log("State counter:",state.counter);
-        if(props.counter !== state.counter){
-            return {counter : props.counter1}
+        console.log("State counter:",state.counter); 
+        if(props.counter1 != state.counter){
+            return {counter : props.counter1}; // update counter value of state 
         }
         return null;
     }
@@ -60,6 +61,9 @@ class Cart extends Component {
         console.log("componentDidMount will execute after render component ");
     }
     componentDidUpdate(prevProps, prevState){
+        if(prevState.counter !== this.state.counter) {
+            console.log('counter state value updated: ');
+        }
         console.log("Component Updated")
     }
     
@@ -67,7 +71,7 @@ class Cart extends Component {
     render() {
         return (
             <div>
-                <p>Counter: {this.state.counter}</p>
+                <p>Cart Counter: {this.state.counter}</p>
             </div>
         )
     }

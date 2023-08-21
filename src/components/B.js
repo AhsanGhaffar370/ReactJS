@@ -1,13 +1,13 @@
 import React from 'react';
-import {mycontext} from "./A"
+import {Consumer} from './context';
 
 const B = () => {
     return (
         <div>
-            {/* <h1>B Component</h1> */}
-            {/* <mycontext.Consumer>
+            <h1>B Component</h1>
+            <Consumer>
                 {contVal=><h4>{contVal.data.name}</h4>}
-            </mycontext.Consumer> */}
+            </Consumer>
         </div>
     );
 }

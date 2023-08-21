@@ -12,7 +12,7 @@ import FunctionalEvent from "./components/EventHandlingFunctional";
 import {FirstComp} from "./components/FirstFunctionalComp";
 import FirstClassComp from "./components/FirstClassComp";
 
-import MapFunc_InlineStyling from "./components/MapFunc_InlineStyling"
+import MapFunc_InlineStyling from "./components/MapFunc"
 
 import Header from "./components/Header";
 // import {Header} from "./components/Header"; 
@@ -74,13 +74,11 @@ class App extends React.Component
         firstName="Ahsan"
       /> */}
       
-      <A isRed={false}></A>
-      <MousePos></MousePos>
 
       <span className="AppyGlobal">child1</span>
-        <span className={AppStyle.AppyLocal}>child2</span> {/* .module.css use to use style in local component */}
+      <span className={AppStyle.AppyLocal}>child2</span> {/* .module.css use to use style in local component */}
         
-      <PropsFunctional  name="Ahsan" last="Ghaffar" abc="Rao">
+      <PropsFunctional  name="Ahsan" last="Ghaffar" abc="Rao" isRed={false}>
         <span className="AppyGlobal">child1</span>
         <span className={AppStyle.AppyLocal}>child2</span>
       </PropsFunctional>
@@ -109,6 +107,10 @@ class App extends React.Component
       <HooksUseState></HooksUseState>
 
       <HooksUseEffect></HooksUseEffect>
+
+      
+      <A></A>
+      <MousePos></MousePos>
 
       <br/><br/><br/><br/><br/>
       <ErrorBoundary><Footer2/></ErrorBoundary>

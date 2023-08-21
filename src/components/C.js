@@ -1,11 +1,11 @@
 import React from 'react';
-import {mycontext} from "./A"
+import {Consumer} from './context';
 
 const C = () => {
     return (
         <div>
             <h1>C Component</h1>
-            <mycontext.Consumer>
+            <Consumer>
             {
                 ({data,counterfunc})=>(
                     <div>
@@ -14,7 +14,7 @@ const C = () => {
                     </div>
                 )
             }
-            </mycontext.Consumer>
+            </Consumer>
         </div>
     );
 }

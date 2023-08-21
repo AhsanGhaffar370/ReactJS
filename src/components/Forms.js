@@ -19,13 +19,14 @@ export default class Forms extends Component {
     }
     handleIsGoing=(e)=>{
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+        console.log("hwerlwe",value);
         const name = e.target.name; //isGoing
         this.setState({ [name]: value });
     }
 
     handleSubmit=(e)=>{
         e.preventDefault();
-        
+
         let isGoing = this.state.isGoing ? "going" : "not going";
         alert(`${this.state.name} is ${isGoing} to ${this.state.city} `)
         
