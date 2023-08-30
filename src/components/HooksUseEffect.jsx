@@ -14,7 +14,7 @@ export default function HooksUseEffect() {
 
     // Effect function will run after every render 
     useEffect(()=>{
-        console.log("Component Updated (UseEffect)")
+        console.log("Component HookUseEffect Updated (UseEffect)")
     },[counter,counter1]) //it means useEffect only run when only counter, counter1, counter2 updated
     return (
         <div>

@@ -23,7 +23,8 @@ const A = (props) => {
     })
 
     useEffect(()=>{
-        console.log("Component Updated (UseEffect)")
+        // console.log(contVal.counterfunc);
+        console.log("Component A Updated (UseEffect)")
         // setcontVal({
         //     data: {
         //         name:"ahsan21",

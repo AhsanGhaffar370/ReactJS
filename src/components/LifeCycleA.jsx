@@ -36,7 +36,7 @@ export default class LifeCycleA extends Component {
              <p>
              Class Component Lifecycle Methods:
 <br></br>
-Mounting:
+<b>Mounting:</b> 
 <br></br>
 {"constructor()"}: Initializes the component's state and binds methods. Rarely used since the introduction of class fields.
 <br></br>
@@ -44,7 +44,7 @@ Mounting:
 <br></br>
 {"componentDidMount()"}: Executes after the component is rendered for the first time. Useful for fetching data or setting up subscriptions.
 <br></br>
-Updating:
+<b>Updating:</b>
 <br></br>
 {"shouldComponentUpdate(nextProps, nextState)"}: Determines whether the component should re-render or not based on the new props or state.
 <br></br>
@@ -52,23 +52,23 @@ Updating:
 <br></br>
 {"componentDidUpdate(prevProps, prevState)"}: Executes after the component updates. Useful for performing side effects after a render.
 <br></br>
-Unmounting:
+<b>Unmounting:</b>
 <br></br>
 {"componentWillUnmount()"}: Executes before the component is removed from the DOM. Used for cleanup tasks like unsubscribing from subscriptions.
 <br></br><br></br>
-Functional Component Lifecycle Equivalents using React Hooks:
+Functional Component Lifecycle Equivalents using React Hooks:-
 <br></br>
-Mounting:
+<b>Mounting:</b>
 <br></br>
 {"useEffect(() => {}, [])"}: Equivalent to componentDidMount(). Runs after the component renders for the first time.
 <br></br>
-Updating:
+<b>Updating:</b>
 <br></br>
 {"useEffect(() => {})"}: Equivalent to componentDidUpdate(). Runs after every render, including the first render.
 <br></br>useMemo(): Can be used to optimize rendering by memoizing the result of a function based on dependencies.
 <br></br>useCallback(): Returns a memoized callback that only changes if its dependencies change.
 <br></br>
-Unmounting:
+<b>Unmounting:</b>
 <br></br>
 <br></br>{"useEffect(() => { return () => {} }, [])"}: Equivalent to componentWillUnmount(). The returned function runs when the component is unmounted.
              </p>

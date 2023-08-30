@@ -14,7 +14,7 @@ export default class GetRequest extends Component {
     
     // We use componentDidMount method when we want to get/receive data from any Restful API/web service
     componentDidMount(){
-        axios.get("https://jsonplaceholder.typicode.com/posts22")
+        axios.get("https://jsonplaceholder.typicode.com/posts")
         .then(response => {
             this.setState({posts: response.data})
             console.log(response);
@@ -24,6 +24,9 @@ export default class GetRequest extends Component {
             if (error?.response?.status == '404') {
                 this.setState({error: "Invalid request url"})
             } else if(error?.response?.status == '404'){
+                this.setState({error: "An error occurred while fetching data."})
+            }
+            else {
                 this.setState({error: "An error occurred while fetching data."})
             }
             console.error("api error: ",error?.response?.status);

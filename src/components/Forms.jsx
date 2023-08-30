@@ -11,12 +11,12 @@ export default class Forms extends Component {
             isGoing: true
         }
     }
-    handleName=(e)=>{
-        this.setState({name: e.target.value})
+    handleName=(event)=>{
+        this.setState({name: event.target.value})
     }
-    handleCity=(event)=> {
-        this.setState({city: event.target.value});
-    }
+    // handleCity=(event)=> {
+    //     this.setState({city: event.target.value});
+    // }
     handleIsGoing=(e)=>{
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
         console.log("hwerlwe",value);
@@ -40,7 +40,7 @@ export default class Forms extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" value={this.state.name} onChange={this.handleName} placeholder="Name" />
                     <br/>
-                    <select value={this.state.city} onChange={this.handleCity}>
+                    <select value={this.state.city} onChange={(e)=> {this.setState({city: e.target.value})}}>
                         <option value="karachi">Karachi</option>
                         <option value="Lahore">Lahore</option>
                         <option value="Islamabad">Islamabad</option>

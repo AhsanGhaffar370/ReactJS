@@ -36,11 +36,11 @@ export default function Routing() {
 }
 
 function Home(){
-    return <h1>Home</h1>
+    return <h1>Home Page</h1>
 }
 function About(){
-    return <h1>About</h1>
+    return <h1>About Page</h1>
 }
 function User(){
-    return <h1>User</h1>
+    return <h1>User Page</h1>
 }

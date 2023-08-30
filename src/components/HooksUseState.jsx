@@ -23,7 +23,7 @@ export default function HooksUseState() {
         for(let i=0; i<10; i++)
             // setCounter3(counter3+1); // this technique will not working with for loop
             setCounter3(prevCounter3=>prevCounter3+1); // prevCounter3 hold previous value of counter3
-    }
+    }   
 
     
     let fname,lname;
@@ -103,7 +103,7 @@ export default function HooksUseState() {
 
             <input type="button" value="Generate random" onClick={addItem} />
             <ul>
-                {items.map(item => (<li key={item.id}>{item.rand}</li>))}
+                {items.map(item => (<li key={item.id}>{item.id} {"->"} {item.rand}</li>))}
             </ul>
             
         </div>
